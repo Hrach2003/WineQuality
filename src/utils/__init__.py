@@ -19,7 +19,7 @@ def classify(model, X: pd.core.api.DataFrame, y: pd.core.api.Series):
     print("CV Score:", mean_CV_score)
     y_pred = model.predict(x_test)
     print(classification_report(y_pred, y_test))
-    return accuracy, mean_CV_score
+    return accuracy, mean_CV_score, y_pred
 
 
 def drop_outliers(df, field):
